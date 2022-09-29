@@ -47,8 +47,6 @@ class Weather < ApplicationRecord
     self.max_temp = historical_max(data)
     self.min_temp = historical_min(data)
     self.avg_temp = historical_avg(data)
-    # binding.pry
-    # sefl.city = data.
   end
 
 
