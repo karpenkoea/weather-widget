@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   # get 'weather/historical/max', to: 'weathers#historical_max'
   # get 'weather/historical/avg', to: 'weathers#historical_avg'
 
-  resources :weather, only: %i[new create index], controller: 'weathers' do
+  # resource :weather, only: %i[create destroy index]
+  resources :weather, only: %i[ create index], controller: 'weathers' do
     namespace :historical, controller: '/weathers' do
       get :min
       get :max

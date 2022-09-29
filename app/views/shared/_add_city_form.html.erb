@@ -1,0 +1,11 @@
+<%#= form_with model: @weather, class: "d-flex mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0" do |f| %>
+  <%#= f.text_field :name, class: 'form-control me-2', placeholder: 'Enter city name' %>
+  <%#= f.submit "Search", class: "btn btn-outline-success" %>
+<%# end %>
+
+<div class="mx-auto">
+  <%= form_for @weather, url: weather_index_path, html: { class: "d-flex mt-4 mt-sm-4 mt-md-4 mt-lg-0 mt-xl-0"} do |f| %>
+    <%= f.text_field :city, class: 'form-control me-2', placeholder: 'Enter city name' %>
+    <%= f.submit "Search", class: "btn btn-outline-success" %>
+  <% end %>
+</div>

@@ -1,3 +1,5 @@
 class PagesController < ApplicationController
-  def index; end
+  def index
+    @weather = Weather.new
+  end
 end
